@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane blendMode="MULTIPLY" cache="true" cacheHint="QUALITY" focusTraversable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="465.0" prefWidth="562.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button layoutX="386.0" layoutY="338.0" mnemonicParsing="false" text="Salvar" />
+      <Label graphicTextGap="7.0" layoutX="193.0" layoutY="14.0" prefHeight="38.0" prefWidth="89.0" text="Cliente">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <TextField accessibleText="nome" layoutX="104.0" layoutY="111.0" prefHeight="25.0" prefWidth="318.0" promptText="telefone" />
+      <Label layoutX="45.0" layoutY="75.0" text="nome: " />
+      <Label layoutX="45.0" layoutY="115.0" text="telefone:" />
+      <TextField accessibleText="nome" layoutX="104.0" layoutY="71.0" prefHeight="25.0" prefWidth="318.0" promptText="nome" />
+      <Label layoutX="44.0" layoutY="147.0" text="cidade:" />
+      <TextField accessibleText="nome" layoutX="104.0" layoutY="143.0" prefHeight="25.0" prefWidth="318.0" promptText="cidade" />
+      <Label layoutX="44.0" layoutY="183.0" text="estado:" />
+      <TextField accessibleText="nome" layoutX="104.0" layoutY="179.0" prefHeight="25.0" prefWidth="318.0" promptText="estado" />
+      <Label layoutX="44.0" layoutY="217.0" text="pais:" />
+      <TextField accessibleText="nome" layoutX="104.0" layoutY="213.0" prefHeight="25.0" prefWidth="318.0" promptText="pais" />
+      <Label layoutX="40.0" layoutY="254.0" text="email:" />
+      <TextField accessibleText="nome" layoutX="104.0" layoutY="250.0" prefHeight="25.0" prefWidth="318.0" promptText="email" />
+      <DatePicker layoutX="132.0" layoutY="329.0" />
+      <Label layoutX="33.0" layoutY="333.0" text=" data de cadastro" />
+      <Label layoutX="37.0" layoutY="290.0" text="limite de credito:" />
+      <TextField accessibleText="nome" layoutX="132.0" layoutY="286.0" prefHeight="25.0" prefWidth="102.0" promptText="limite" />
+   </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</Pane>
