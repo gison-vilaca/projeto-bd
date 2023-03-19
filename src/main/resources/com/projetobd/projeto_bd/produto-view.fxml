@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField layoutX="138.0" layoutY="95.0" prefHeight="34.0" prefWidth="75.0" />
+      <Label layoutX="234.0" layoutY="36.0" text="Produto">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="38.0" layoutY="90.0" prefHeight="34.0" prefWidth="121.0" text="Preco de custo">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <Label layoutX="313.0" layoutY="90.0" prefHeight="34.0" prefWidth="121.0" text="Preco de venda">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField layoutX="425.0" layoutY="90.0" prefHeight="34.0" prefWidth="94.0" />
+      <Label layoutX="38.0" layoutY="150.0" prefHeight="34.0" prefWidth="121.0" text="Preco de venda">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField layoutX="138.0" layoutY="150.0" prefHeight="34.0" prefWidth="75.0" />
+      <Label layoutX="277.0" layoutY="138.0" prefHeight="45.0" prefWidth="165.0" text="Preco de venda minima">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField layoutX="424.0" layoutY="144.0" prefHeight="34.0" prefWidth="94.0" />
+      <Label layoutX="38.0" layoutY="204.0" prefHeight="34.0" prefWidth="121.0" text="Data de garantia">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <DatePicker layoutX="138.0" layoutY="208.0" prefHeight="34.0" prefWidth="165.0" />
+      <TextField layoutX="424.0" layoutY="204.0" prefHeight="34.0" prefWidth="94.0" />
+      <Label layoutX="328.0" layoutY="198.0" prefHeight="45.0" prefWidth="165.0" text="valor de status">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="38.0" layoutY="256.0" prefHeight="34.0" prefWidth="121.0" text="id_fornecedor">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField layoutX="159.0" layoutY="262.0" prefHeight="34.0" prefWidth="75.0" />
+      <Label layoutX="328.0" layoutY="251.0" prefHeight="45.0" prefWidth="165.0" text="id_categoria">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField layoutX="425.0" layoutY="256.0" prefHeight="34.0" prefWidth="94.0" />
+      <Label layoutX="38.0" layoutY="306.0" prefHeight="34.0" prefWidth="121.0" text="produto_descricao">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField layoutX="159.0" layoutY="306.0" prefHeight="34.0" prefWidth="75.0" />
+      <Label layoutX="319.0" layoutY="301.0" prefHeight="45.0" prefWidth="165.0" text="produto_nome">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField layoutX="425.0" layoutY="306.0" prefHeight="34.0" prefWidth="94.0" />
+   </children>
+</Pane>
