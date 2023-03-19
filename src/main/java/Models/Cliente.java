@@ -1,5 +1,6 @@
 package Models;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Cliente {
@@ -10,14 +11,24 @@ public class Cliente {
     private String cidade;
     private double limite_credito;
     private Date data_cadastro;
+    private ArrayList<String> emails;
+    private ArrayList<String> telefones;
 
-    public Cliente(String nome, String pais, String estado, String cidade, double limite_credito) {
+    public Cliente(String nome, String pais, String estado, String cidade, double limite_credito,
+                   String email,String telefone) {
+
+        this.emails = new ArrayList<>();
+        this.telefones = new ArrayList<>();
+
         this.nome = nome;
         this.pais = pais;
         this.estado = estado;
         this.cidade = cidade;
         this.limite_credito = limite_credito;
         this.data_cadastro = new Date();
+        this.emails.add(email);
+        this.telefones.add(telefone);
+
     }
 
     public Cliente(){
@@ -72,6 +83,22 @@ public class Cliente {
         return data_cadastro;
     }
 
+    public ArrayList<String> getEmails() {
+        return emails;
+    }
+
+    public ArrayList<String> getTelefones() {
+        return telefones;
+    }
+
+    public void setTelefones(ArrayList<String> telefones) {
+        this.telefones = telefones;
+    }
+
+    public void setEmails(ArrayList<String> emails) {
+        this.emails = emails;
+    }
+
     @Override
     public String toString() {
         return "Cliente{" +
@@ -82,6 +109,8 @@ public class Cliente {
                 ", cidade='" + cidade + '\'' +
                 ", limite_credito=" + limite_credito +
                 ", data_cadastro=" + data_cadastro +
+                ", email=" + emails +
+                ", telefone=" + telefones+
                 '}';
     }
 }
