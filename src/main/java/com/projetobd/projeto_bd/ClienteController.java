@@ -6,10 +6,10 @@ import javafx.scene.control.Label;
 public class ClienteController {
 
     @FXML
-    private Label welcomeText;
+    private Label salvo;
 
     @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application! ");
+    protected void onSalvarButtonClick() {
+        salvo.setText("Cliente Salvo!");
     }
 }
