@@ -3,10 +3,14 @@ package com.projetobd.projeto_bd;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class ArmazemController {
+public class Pedido_produtoController {
 
     @FXML
-    private Label welcomeText;
+    private final Label welcomeText;
+
+    public Pedido_produtoController(Label welcomeText) {
+        this.welcomeText = welcomeText;
+    }
 
     @FXML
     protected void onHelloButtonClick() {

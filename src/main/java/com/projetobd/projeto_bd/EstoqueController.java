@@ -3,7 +3,7 @@ package com.projetobd.projeto_bd;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class ArmazemController {
+public class EstoqueController {
 
     @FXML
     private Label welcomeText;
@@ -12,4 +12,5 @@ public class ArmazemController {
     protected void onHelloButtonClick() {
         welcomeText.setText("Welcome to JavaFX Application! ");
     }
+
 }

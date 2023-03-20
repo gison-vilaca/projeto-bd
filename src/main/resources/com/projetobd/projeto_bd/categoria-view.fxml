@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane blendMode="MULTIPLY" cache="true" cacheHint="QUALITY" focusTraversable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="465.0" prefWidth="562.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Button layoutX="386.0" layoutY="168.0" mnemonicParsing="false" text="Salvar" />
+        <Label graphicTextGap="7.0" layoutX="193.0" layoutY="14.0" prefHeight="38.0" prefWidth="189.0" text="Categoria">
+            <font>
+                <Font size="26.0" />
+            </font>
+        </Label>
+        <TextField accessibleText="nome" layoutX="104.0" layoutY="111.0" prefHeight="25.0" prefWidth="318.0" promptText="descricao" />
+        <Label layoutX="65.0" layoutY="75.0" text="nome: " />
+
+        <Label layoutX="43.0" layoutY="115.0" text="descricao:" />
+        <TextField accessibleText="nome" layoutX="104.0" layoutY="71.0" prefHeight="25.0" prefWidth="318.0" promptText="nome" />
+
+
+    </children>
+    <cursor>
+        <Cursor fx:constant="DEFAULT" />
+    </cursor>
+</Pane>
