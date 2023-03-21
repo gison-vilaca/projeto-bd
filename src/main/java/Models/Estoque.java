@@ -15,6 +15,9 @@ public class Estoque {
         this.id_armazem = id_armazem;
     }
 
+    public Estoque() {
+    }
+
     public int getId_estoque() {
         return id_estoque;
     }

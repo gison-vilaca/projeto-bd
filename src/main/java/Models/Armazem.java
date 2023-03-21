@@ -12,6 +12,9 @@ public class Armazem {
         this.endereco = endereco;
     }
 
+    public Armazem() {
+    }
+
     public int getId_armazem() {
         return id_armazem;
     }

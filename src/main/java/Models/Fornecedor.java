@@ -15,6 +15,9 @@ public class Fornecedor {
         this.cpf_cnpj = cpf_cnpj;
     }
 
+    public Fornecedor() {
+    }
+
     public int getId_fornecedor() {
         return id_fornecedor;
     }

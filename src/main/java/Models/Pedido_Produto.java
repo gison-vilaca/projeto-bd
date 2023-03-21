@@ -13,6 +13,9 @@ public class Pedido_Produto {
         this.preco_produto = preco_produto;
     }
 
+    public Pedido_Produto() {
+    }
+
     public int getId_pedido() {
         return id_pedido;
     }
