@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class Cliente {
+
+
     private int id_cliente;
     private String nome;
     private String pais;
@@ -98,7 +100,13 @@ public class Cliente {
     public void setEmails(ArrayList<String> emails) {
         this.emails = emails;
     }
+    public void setId_cliente(int id_cliente) {
+        this.id_cliente = id_cliente;
+    }
 
+    public void setData_cadastro(Date data_cadastro) {
+        this.data_cadastro = data_cadastro;
+    }
     @Override
     public String toString() {
         return "Cliente{" +

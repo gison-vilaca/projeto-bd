@@ -31,6 +31,9 @@ public class Produto {
         this.produto_nome = produto_nome;
     }
 
+    public Produto() {
+    }
+
     public int getId_produto() {
         return id_produto;
     }

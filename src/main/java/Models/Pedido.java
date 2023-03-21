@@ -22,6 +22,9 @@ public class Pedido {
         this.id_cliente = id_cliente;
     }
 
+    public Pedido() {
+    }
+
     public int getId_pedido() {
         return id_pedido;
     }

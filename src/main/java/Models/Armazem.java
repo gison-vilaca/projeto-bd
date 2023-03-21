@@ -2,6 +2,10 @@ package Models;
 
 public class Armazem {
 
+    public void setId_armazem(int id_armazem) {
+        this.id_armazem = id_armazem;
+    }
+
     private int id_armazem;
     private String nome;
 
@@ -10,6 +14,9 @@ public class Armazem {
     public Armazem( String nome, String endereco) {
         this.nome = nome;
         this.endereco = endereco;
+    }
+
+    public Armazem() {
     }
 
     public int getId_armazem() {
