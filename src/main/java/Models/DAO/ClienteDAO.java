@@ -42,8 +42,12 @@ public class ClienteDAO implements inteface<Cliente>{
                 while (rs.next()) {
                    id_cliente = rs.getInt("ID_CLIENTE");
                 }
-                inseriremails(cliente, id_cliente);
-                inserirTelefones(cliente, id_cliente);
+
+                Email_clienteDAO emailCliente = new Email_clienteDAO();
+                emailCliente.create(cliente, id_cliente);
+                Telefone_ClienteDAO telefoneCliente = new Telefone_ClienteDAO();
+                telefoneCliente.create(cliente, id_cliente);
+
                 System.out.println("Dados inseridos com sucesso! Linhas afetadas: " + linhasAfetadas);
             }
 
@@ -52,44 +56,6 @@ public class ClienteDAO implements inteface<Cliente>{
         }
     }
 
-    public void inseriremails(Cliente cliente, int id_cliente) throws SQLException {
-        List<String> emails = cliente.getEmails();
-        for(int i = 0; i < emails.size(); i++){
-            try {
-                String sql = "INSERT INTO EMAIL_CLIENTE(ID_CLIENTE,EMAIL)" + "VALUES(?,?)";
-                PreparedStatement stmt = dao.getConnection().prepareStatement(sql);
-
-                stmt.setInt(1, id_cliente);
-                stmt.setString(2, emails.get(i));
-
-                // Executa a instrução INSERT
-                int linhasAfetadas = stmt.executeUpdate();
-
-                System.out.println("Dados inseridos com sucesso! Linhas afetadas: " + linhasAfetadas);
-            }catch (SQLException e){
-                throw new SQLException("erro ao inserir emails");
-            }
-        }
-    }
-    public  void inserirTelefones(Cliente cliente, int id_cliente) throws SQLException {
-        List<String> telefones = cliente.getTelefones();
-        for(int i = 0; i < telefones.size(); i++){
-            try {
-                String sql = "INSERT INTO TELEFONE_CLIENTE(ID_CLIENTE,TELEFONE)" + "VALUES(?,?)";
-                PreparedStatement stmt = dao.getConnection().prepareStatement(sql);
-
-                stmt.setInt(1, id_cliente);
-                stmt.setString(2, telefones.get(i));
-
-                // Executa a instrução INSERT
-                int linhasAfetadas = stmt.executeUpdate();
-
-                System.out.println("Dados inseridos com sucesso! Linhas afetadas: " + linhasAfetadas);
-            }catch (SQLException e){
-                throw new SQLException("erro ao inserir telefone!");
-            }
-        }
-    }
 
     @Override
     public Cliente read(int id) throws Exception{
@@ -122,9 +88,10 @@ public class ClienteDAO implements inteface<Cliente>{
                 cliente.setLimite_credito(limite_credito);
                 cliente.setData_cadastro(data_cadastro);
             }
-
-            cliente.setEmails(readEmailsCliente(id));
-            cliente.setTelefones(readTelefonesCliente(id));
+            Email_clienteDAO emailCliente = new Email_clienteDAO();
+            Telefone_ClienteDAO telefoneCliente = new Telefone_ClienteDAO();
+            cliente.setEmails(emailCliente.read(id));
+            cliente.setTelefones(telefoneCliente.read(id));
 
             return cliente;
 
@@ -133,74 +100,31 @@ public class ClienteDAO implements inteface<Cliente>{
         }
     }
 
-    public ArrayList<String> readEmailsCliente(int id_cliente) throws Exception {
-        ResultSet rs = null;
-        ArrayList<String> emails = new ArrayList<>();
-
-        try {
-            String sql = "SELECT * FROM EMAIL_CLIENTE WHERE ID_CLIENTE = ?";
-            PreparedStatement stmt = dao.getConnection().prepareStatement(sql);
-            stmt.setInt(1, id_cliente);
-
-            // Executa a consulta SELECT
-            rs = stmt.executeQuery();
-
-            while (rs.next()) {
-                String email = rs.getString("Nome");
-                emails.add(email);
-            }
-
-            return emails;
-        }catch (SQLException e){
-            throw new Exception("Erro read emails!");
-        }
-    }
-
-    public ArrayList readTelefonesCliente(int id_cliente) throws Exception {
-        ResultSet rs = null;
-        ArrayList<String> telefones = new ArrayList<>();
-
-        try {
-            String sql = "SELECT * FROM TELEFONE_CLIENTE WHERE ID_CLIENTE = ?";
-            PreparedStatement stmt = dao.getConnection().prepareStatement(sql);
-            stmt.setInt(1, id_cliente);
-
-            // Executa a consulta SELECT
-            rs = stmt.executeQuery();
-
-            while (rs.next()) {
-                String telefone = rs.getString("telefones");
-                telefones.add(telefone);
-            }
-
-            return telefones;
-
-        }catch (SQLException e){
-            throw new Exception("Erro read telefones!");
-        }
-    }
 
     @Override
     public void update(Cliente cliente) throws Exception {
         try{
-            String sql = "UPDATE CLIENTE SET nome = ?, descricao = ? WHERE id_categoria = ?";
+            String sql = "UPDATE CLIENTE SET nome = ?, pais = ?, estado = ?, cidade = ?, limite_credito = ? WHERE id_cliente = ?";
             PreparedStatement stmt = dao.getConnection().prepareStatement(sql);
             stmt.setString(1,cliente.getNome());
             stmt.setString(2,cliente.getPais());
             stmt.setString(3,cliente.getEstado());
+            stmt.setString(4,cliente.getCidade());
+            stmt.setDouble(5,cliente.getLimite_credito());
 
             // Executa a instrução UPDATE
             int linhasAfetadas = stmt.executeUpdate();
 
+
             System.out.println("Dados atualizados com sucesso! Linhas afetadas: " + linhasAfetadas);
 
         } catch (SQLException e){
-            throw new Exception("");
+            throw new Exception("Erro update cliente!");
         }
     }
 
     @Override
-    public void delete(Cliente object) {
+    public void delete(Cliente cliente) {
 
     }
 
@@ -208,4 +132,6 @@ public class ClienteDAO implements inteface<Cliente>{
     public List<Cliente> all() throws Exception {
         return null;
     }
+
+
 }
