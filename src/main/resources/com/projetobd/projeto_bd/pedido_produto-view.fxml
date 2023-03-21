@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import javafx.scene.control.cell.TextFieldListCell?>
+<Pane blendMode="MULTIPLY" cache="true" cacheHint="QUALITY" focusTraversable="true" maxHeight="1.7976931348623157E308"
+      maxWidth="1.7976931348623157E308" prefHeight="465.0" prefWidth="562.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
+      xmlns:fx="http://javafx.com/fxml/1">
+    <cursor>
+        <Cursor fx:constant="DEFAULT"/>
+    </cursor>
+    <Button layoutX="386.0" layoutY="220.0" mnemonicParsing="false" text="Salvar"/>
+    <Label graphicTextGap="7.0" layoutX="193.0" layoutY="14.0" prefHeight="38.0" prefWidth="189.0" text="Pedido">
+        <font>
+            <Font size="26.0"/>
+        </font>
+    </Label>
+    <TextField accessibleText="quantidade" layoutX="105.0" layoutY="100.0" prefHeight="25.0" prefWidth="320.0"/>
+    <Label layoutX="33.0" layoutY="100.0" text="quantidade: "/>
+
+    <TextField accessibleText="id_produto" layoutX="100.0" layoutY="140.0" prefHeight="25.0" prefWidth="325.0"/>
+    <Label layoutX="33.0" layoutY="140.0" text="id_produto: "/>
+
+    <TextField accessibleText="preco_produto" layoutX="120.0" layoutY="180.0" prefHeight="25.0" prefWidth="305.0"/>
+    <Label layoutX="33.0" layoutY="180.0" text="preco_produto: "/>
+
+</Pane>
