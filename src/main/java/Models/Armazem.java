@@ -2,6 +2,10 @@ package Models;
 
 public class Armazem {
 
+    public void setId_armazem(int id_armazem) {
+        this.id_armazem = id_armazem;
+    }
+
     private int id_armazem;
     private String nome;
 
