@@ -59,14 +59,28 @@ public class Telefone_ClienteDAO {
     }
 
     public void update(Cliente cliente, int id) throws Exception {
-
-    }
-
-    public void delete(Cliente cliente) throws Exception {
-
+        //uma primary key não pode ser alterada e telefone é primary key
     }
 
     public List<String> all() throws Exception {
-        return null;
+        ResultSet rs = null;
+        List<String> todos = new ArrayList<>();
+
+        try {
+            String sql = "SELECT * FROM telefone_cliente";
+            PreparedStatement stmt = dao.getConnection().prepareStatement(sql);
+
+            // Executa a consulta SELECT
+            rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                String telefone = rs.getString("telefone");
+
+                todos.add(telefone);
+            }
+        }catch (Exception e){
+            throw new Exception("Erro all telefone!");
+        }
+        return todos;
     }
 }

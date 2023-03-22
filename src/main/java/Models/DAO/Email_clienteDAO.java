@@ -1,5 +1,6 @@
 package Models.DAO;
 
+import Models.Armazem;
 import Models.Cliente;
 
 import java.sql.PreparedStatement;
@@ -57,14 +58,29 @@ public class Email_clienteDAO{
     }
 
     public void update(Cliente cliente, int id) throws Exception {
-
+        //uma primary key não pode ser alterada e email é primary key
     }
 
-    public void delete(Cliente cliente, int id) throws Exception {
-
-    }
 
     public List<String> all() throws Exception {
-        return null;
+        ResultSet rs = null;
+        List<String> todos = new ArrayList<>();
+
+        try {
+            String sql = "SELECT * FROM email_cliente";
+            PreparedStatement stmt = dao.getConnection().prepareStatement(sql);
+
+            // Executa a consulta SELECT
+            rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                String email = rs.getString("email");
+
+                todos.add(email);
+            }
+        }catch (Exception e){
+            throw new Exception("Erro all emails!");
+        }
+        return todos;
     }
 }

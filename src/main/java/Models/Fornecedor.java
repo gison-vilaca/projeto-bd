@@ -2,6 +2,8 @@ package Models;
 
 public class Fornecedor {
 
+
+
     private int id_fornecedor;
     private String nome;
     private String localidade;
@@ -21,7 +23,9 @@ public class Fornecedor {
     public int getId_fornecedor() {
         return id_fornecedor;
     }
-
+    public void setId_fornecedor(int id_fornecedor) {
+        this.id_fornecedor = id_fornecedor;
+    }
     public String getNome() {
         return nome;
     }

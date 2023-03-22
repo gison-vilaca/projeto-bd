@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class Produto {
+
+
     private int id_produto;
     private float preco_custo;
     private float preco_venda;
@@ -37,7 +39,9 @@ public class Produto {
     public int getId_produto() {
         return id_produto;
     }
-
+    public void setId_produto(int id_produto) {
+        this.id_produto = id_produto;
+    }
     public float getPreco_custo() {
         return preco_custo;
     }

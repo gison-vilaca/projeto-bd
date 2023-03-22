@@ -3,6 +3,8 @@ package Models;
 import java.util.Date;
 
 public class Pedido {
+
+
     private int id_pedido;
     private Date data_pedido;
     private String modo_encomenda;
@@ -28,7 +30,9 @@ public class Pedido {
     public int getId_pedido() {
         return id_pedido;
     }
-
+    public void setId_pedido(int id_pedido) {
+        this.id_pedido = id_pedido;
+    }
     public Date getData_pedido() {
         return data_pedido;
     }
