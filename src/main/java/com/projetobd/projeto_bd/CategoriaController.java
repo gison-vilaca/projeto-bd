@@ -19,7 +19,7 @@ public class CategoriaController {
     protected void onSalvarButtonClick() {
 
         String nome = txtNome.getText();
-        String endereco = txtDescricao.getText();
+        String descricao = txtDescricao.getText();
 
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Categoria salva com sucesso!");
         alert.show();

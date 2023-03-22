@@ -15,7 +15,7 @@ public class FornecedorApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(FornecedorApplication.class.getResource("fornecedor-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+        Scene scene = new Scene(fxmlLoader.load(), 480, 380);
         stage.setScene(scene);
         stage.show();
     }
