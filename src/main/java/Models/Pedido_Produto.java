@@ -2,10 +2,12 @@ package Models;
 
 public class Pedido_Produto {
 
+
+
     private int id_pedido;
     private int quantidade;
     private int id_produto;
-    private int preco_produto;
+    private float preco_produto;
 
     public Pedido_Produto(int quantidade, int id_produto, int preco_produto) {
         this.quantidade = quantidade;
@@ -19,7 +21,9 @@ public class Pedido_Produto {
     public int getId_pedido() {
         return id_pedido;
     }
-
+    public void setId_pedido(int id_pedido) {
+        this.id_pedido = id_pedido;
+    }
     public int getQuantidade() {
         return quantidade;
     }
@@ -36,11 +40,11 @@ public class Pedido_Produto {
         this.id_produto = id_produto;
     }
 
-    public int getPreco_produto() {
+    public float getPreco_produto() {
         return preco_produto;
     }
 
-    public void setPreco_produto(int preco_produto) {
+    public void setPreco_produto(float preco_produto) {
         this.preco_produto = preco_produto;
     }
 
