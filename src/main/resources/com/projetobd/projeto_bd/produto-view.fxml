@@ -4,10 +4,10 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+<Pane prefHeight="414.0" prefWidth="574.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projetobd.projeto_bd.ProdutoController">
    <children>
-      <TextField layoutX="138.0" layoutY="95.0" prefHeight="34.0" prefWidth="75.0" />
-      <Label layoutX="234.0" layoutY="36.0" text="Produto">
+      <TextField fx:id="txtPrecoCusto" layoutX="138.0" layoutY="95.0" prefHeight="34.0" prefWidth="75.0" promptText="0.0" />
+      <Label layoutX="150.0" layoutY="26.0" text="Cadastro de Produto">
          <font>
             <Font size="30.0" />
          </font>
@@ -16,59 +16,54 @@
          <font>
             <Font size="13.0" />
          </font></Label>
-      <Label layoutX="313.0" layoutY="90.0" prefHeight="34.0" prefWidth="121.0" text="Preco de venda">
-         <font>
-            <Font size="13.0" />
-         </font>
-      </Label>
-      <TextField layoutX="425.0" layoutY="90.0" prefHeight="34.0" prefWidth="94.0" />
       <Label layoutX="38.0" layoutY="150.0" prefHeight="34.0" prefWidth="121.0" text="Preco de venda">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <TextField layoutX="138.0" layoutY="150.0" prefHeight="34.0" prefWidth="75.0" />
-      <Label layoutX="277.0" layoutY="138.0" prefHeight="45.0" prefWidth="165.0" text="Preco de venda minima">
+      <TextField fx:id="txtPrecoVenda" layoutX="138.0" layoutY="150.0" prefHeight="34.0" prefWidth="75.0" promptText="0.0" />
+      <Label layoutX="272.0" layoutY="90.0" prefHeight="45.0" prefWidth="165.0" text="Preco de venda minima">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <TextField layoutX="424.0" layoutY="144.0" prefHeight="34.0" prefWidth="94.0" />
-      <Label layoutX="38.0" layoutY="204.0" prefHeight="34.0" prefWidth="121.0" text="Data de garantia">
+      <TextField fx:id="txtPrecoVendaMinima" layoutX="437.0" layoutY="95.0" prefHeight="34.0" prefWidth="94.0" promptText="0.0" />
+      <Label layoutX="32.0" layoutY="209.0" prefHeight="34.0" prefWidth="121.0" text="Data de garantia">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <DatePicker layoutX="138.0" layoutY="208.0" prefHeight="34.0" prefWidth="165.0" />
-      <TextField layoutX="424.0" layoutY="204.0" prefHeight="34.0" prefWidth="94.0" />
-      <Label layoutX="328.0" layoutY="198.0" prefHeight="45.0" prefWidth="165.0" text="valor de status">
+      <DatePicker fx:id="datePickerGarantia" layoutX="138.0" layoutY="208.0" prefHeight="34.0" prefWidth="165.0" />
+      <TextField fx:id="txtValorStatus" layoutX="390.0" layoutY="144.0" prefHeight="34.0" prefWidth="141.0" promptText="0.0" />
+      <Label layoutX="272.0" layoutY="144.0" prefHeight="45.0" prefWidth="165.0" text="Valor de status">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Label layoutX="38.0" layoutY="256.0" prefHeight="34.0" prefWidth="121.0" text="id_fornecedor">
+      <Label layoutX="38.0" layoutY="263.0" prefHeight="34.0" prefWidth="121.0" text="Id do fornecedor">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <TextField layoutX="159.0" layoutY="262.0" prefHeight="34.0" prefWidth="75.0" />
-      <Label layoutX="328.0" layoutY="251.0" prefHeight="45.0" prefWidth="165.0" text="id_categoria">
+      <TextField fx:id="txtIdFornecedor" layoutX="159.0" layoutY="262.0" prefHeight="34.0" prefWidth="75.0" promptText="0" />
+      <Label layoutX="319.0" layoutY="203.0" prefHeight="45.0" prefWidth="165.0" text="Id da categoria">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <TextField layoutX="425.0" layoutY="256.0" prefHeight="34.0" prefWidth="94.0" />
-      <Label layoutX="38.0" layoutY="306.0" prefHeight="34.0" prefWidth="121.0" text="produto_descricao">
+      <TextField fx:id="txtIdCategoria" layoutX="425.0" layoutY="209.0" prefHeight="34.0" prefWidth="106.0" promptText="0" />
+      <Label layoutX="38.0" layoutY="323.0" prefHeight="34.0" prefWidth="141.0" text="Descrição do produto">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <TextField layoutX="159.0" layoutY="306.0" prefHeight="34.0" prefWidth="75.0" />
-      <Label layoutX="319.0" layoutY="301.0" prefHeight="45.0" prefWidth="165.0" text="produto_nome">
+      <TextField fx:id="txtDescricaoProduto" layoutX="176.0" layoutY="323.0" prefHeight="34.0" prefWidth="192.0" promptText="txt" />
+      <Label layoutX="279.0" layoutY="257.0" prefHeight="45.0" prefWidth="165.0" text="Nome do produto">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <TextField layoutX="425.0" layoutY="306.0" prefHeight="34.0" prefWidth="94.0" />
+      <TextField fx:id="txtProdutoNome" layoutX="410.0" layoutY="263.0" prefHeight="34.0" prefWidth="121.0" promptText="txt" />
+      <Button fx:id="salvo" layoutX="461.0" layoutY="357.0" mnemonicParsing="false" onAction="#onSalvarButtonClick" prefHeight="34.0" prefWidth="75.0" text="Salvar" />
    </children>
 </Pane>

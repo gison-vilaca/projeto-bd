@@ -5,25 +5,25 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane blendMode="MULTIPLY" cache="true" cacheHint="QUALITY" focusTraversable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="465.0" prefWidth="562.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+<Pane blendMode="MULTIPLY" cache="true" cacheHint="QUALITY" focusTraversable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="332.0" prefWidth="562.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projetobd.projeto_bd.EstoqueController">
     <children>
-        <Button layoutX="386.0" layoutY="238.0" mnemonicParsing="false" text="Salvar" />
-        <Label graphicTextGap="7.0" layoutX="193.0" layoutY="14.0" prefHeight="38.0" prefWidth="189.0" text="Estoque">
+        <Button fx:id="salvo" layoutX="386.0" layoutY="238.0" mnemonicParsing="false" onAction="#onSalvarButtonClick" prefHeight="25.0" prefWidth="63.0" text="Salvar" />
+        <Label graphicTextGap="7.0" layoutX="148.0" layoutY="14.0" prefHeight="38.0" prefWidth="224.0" text="Cadastrar Estoque">
             <font>
                 <Font size="26.0" />
             </font>
         </Label>
-        <TextField accessibleText="cod_estoque" layoutX="104.0" layoutY="111.0" prefHeight="25.0" prefWidth="318.0" promptText="quantidade" />
+        <TextField fx:id="txtQuantidade" accessibleText="cod_estoque" layoutX="104.0" layoutY="111.0" prefHeight="25.0" prefWidth="340.0" promptText="quantidade" />
         <Label layoutX="33.0" layoutY="75.0" text="cod_estoque: " />
 
         <Label layoutX="33.0" layoutY="115.0" text="quantidade:" />
-        <TextField accessibleText="cod_estoque" layoutX="104.0" layoutY="71.0" prefHeight="25.0" prefWidth="318.0" promptText="cod_estoque" />
+        <TextField fx:id="txtCodigoEstoque" accessibleText="cod_estoque" layoutX="104.0" layoutY="71.0" prefHeight="25.0" prefWidth="340.0" promptText="cod_estoque" />
 
         <Label layoutX="33.0" layoutY="147.0" text="id_produto:" />
-        <TextField accessibleText="cod_estoque" layoutX="104.0" layoutY="143.0" prefHeight="25.0" prefWidth="318.0" promptText="id_produto" />
+        <TextField fx:id="txtIdProduto" accessibleText="cod_estoque" layoutX="104.0" layoutY="143.0" prefHeight="25.0" prefWidth="340.0" promptText="id_produto" />
 
         <Label layoutX="33.0" layoutY="183.0" text="id_armazem:" />
-        <TextField accessibleText="cod_estoque" layoutX="104.0" layoutY="179.0" prefHeight="25.0" prefWidth="318.0" promptText="id_armazem" />
+        <TextField fx:id="txtIdArmazem" accessibleText="cod_estoque" layoutX="104.0" layoutY="179.0" prefHeight="25.0" prefWidth="340.0" promptText="id_armazem" />
 
     </children>
     <cursor>
