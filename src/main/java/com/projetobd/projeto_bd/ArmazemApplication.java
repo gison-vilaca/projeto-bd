@@ -8,8 +8,6 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-import static javafx.application.Application.launch;
-
 public class ArmazemApplication extends Application {
 
     @Override
