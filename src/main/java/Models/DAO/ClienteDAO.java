@@ -1,5 +1,6 @@
 package Models.DAO;
 
+import Models.Armazem;
 import Models.Categoria;
 import Models.Cliente;
 
@@ -37,7 +38,7 @@ public class ClienteDAO implements inteface<Cliente>{
                 String busca = "SELECT TOP 1 * FROM Cliente ORDER BY id_cliente DESC";
                 PreparedStatement res = dao.getConnection().prepareStatement(sql);
                 // Executa a consulta SELECT
-                rs = stmt.executeQuery();
+                rs = res.executeQuery();
 
                 while (rs.next()) {
                    id_cliente = rs.getInt("ID_CLIENTE");
@@ -52,7 +53,7 @@ public class ClienteDAO implements inteface<Cliente>{
             }
 
         } catch (SQLException e){
-            throw new Exception("");
+            throw new Exception("Erro ao inserir cliente!");
         }
     }
 
@@ -124,13 +125,60 @@ public class ClienteDAO implements inteface<Cliente>{
     }
 
     @Override
-    public void delete(Cliente cliente) {
+    public void delete(Cliente cliente) throws Exception {
+        try {
+            String sql = "DELETE FROM CLIENTE WHERE id_cliente = ?";
+            PreparedStatement stmt = dao.getConnection().prepareStatement(sql);
+            stmt.setInt(1, cliente.getId_cliente());
 
+            // Executa a instrução DELETE
+            int linhasAfetadas = stmt.executeUpdate();
+
+            System.out.println("Dados deletados com sucesso! Linhas afetadas: " + linhasAfetadas);
+        }catch (Exception e){
+            throw new Exception("Erro deletar cliente!");
+        }
     }
 
     @Override
     public List<Cliente> all() throws Exception {
-        return null;
+        ResultSet rs = null;
+        Cliente cliente = null;
+        List<Cliente> todos = new ArrayList<>();
+
+        try{
+            String sql = "SELECT * FROM CLIENTE";
+            PreparedStatement stmt = dao.getConnection().prepareStatement(sql);
+
+            // Executa a consulta SELECT
+            rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                int id_cliente = rs.getInt("ID_CLIENTE");
+                String nome = rs.getString("Nome");
+                String pais = rs.getString("pais");
+                String estado = rs.getString("estado");
+                String cidade = rs.getString("cidade");
+                double limite_credito = rs.getDouble("limite_credito");
+                Date data_cadastro = rs.getDate("data_cadastro");
+
+                cliente = new Cliente();
+                cliente.setId_cliente(id_cliente);
+                cliente.setNome(nome);
+                cliente.setPais(pais);
+                cliente.setEstado(estado);
+                cliente.setCidade(cidade);
+                cliente.setLimite_credito(limite_credito);
+                cliente.setData_cadastro(data_cadastro);
+
+                todos.add(cliente);
+            }
+
+            return todos;
+
+        } catch (SQLException e){
+            throw new Exception("Erro all cliente!");
+        }
     }
 
 

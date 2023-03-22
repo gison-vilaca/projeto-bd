@@ -2,13 +2,15 @@ package Models;
 
 public class Estoque {
 
+
+
     private int id_estoque;
-    private int cod_estoque;
+    private String cod_estoque;
     private int quantidade;
     private int id_produto;
     private int id_armazem;
 
-    public Estoque(int cod_estoque, int quantidade, int id_produto, int id_armazem) {
+    public Estoque(String cod_estoque, int quantidade, int id_produto, int id_armazem) {
         this.cod_estoque = cod_estoque;
         this.quantidade = quantidade;
         this.id_produto = id_produto;
@@ -21,12 +23,14 @@ public class Estoque {
     public int getId_estoque() {
         return id_estoque;
     }
-
-    public int getCod_estoque() {
+    public void setId_estoque(int id_estoque) {
+        this.id_estoque = id_estoque;
+    }
+    public String getCod_estoque() {
         return cod_estoque;
     }
 
-    public void setCod_estoque(int cod_estoque) {
+    public void setCod_estoque(String cod_estoque) {
         this.cod_estoque = cod_estoque;
     }
 
