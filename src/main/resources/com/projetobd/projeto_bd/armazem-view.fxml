@@ -4,24 +4,24 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projetobd.projeto_bd.ArmazemController">
+<AnchorPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projetobd.projeto_bd.ArmazemController">
    <children>
-      <Label layoutX="235.0" layoutY="25.0" prefHeight="70.0" prefWidth="174.0" text="Armazem ">
+      <Label layoutX="136.0" layoutY="24.0" prefHeight="70.0" prefWidth="275.0" text="Cadastro de Armazem ">
          <font>
-            <Font size="21.0" />
+            <Font size="25.0" />
          </font>
       </Label>
-      <Label layoutX="55.0" layoutY="115.0" text="Nome">
+      <Label layoutX="25.0" layoutY="115.0" text="Nome">
          <font>
             <Font size="21.0" />
          </font></Label>
-      <TextField layoutX="142.0" layoutY="118.0" prefHeight="25.0" prefWidth="367.0" />
-      <Label layoutX="55.0" layoutY="168.0" text="Endereco">
+      <TextField fx:id="txtNome" layoutX="127.0" layoutY="118.0" prefHeight="25.0" prefWidth="367.0" promptText="nome" />
+      <Label layoutX="25.0" layoutY="168.0" text="Endereco">
          <font>
             <Font size="21.0" />
          </font>
       </Label>
-      <TextField layoutX="150.0" layoutY="171.0" prefHeight="25.0" prefWidth="360.0" />
-      <Button layoutX="423.0" layoutY="281.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="95.0" text="Salvar" />
+      <TextField fx:id="txtEndereco" layoutX="131.0" layoutY="171.0" prefHeight="25.0" prefWidth="360.0" promptText="endereco" />
+      <Button fx:id="salvo" layoutX="423.0" layoutY="281.0" mnemonicParsing="false" onAction="#onSalvarButtonClick" prefHeight="38.0" prefWidth="95.0" text="Salvar" />
    </children>
 </AnchorPane>

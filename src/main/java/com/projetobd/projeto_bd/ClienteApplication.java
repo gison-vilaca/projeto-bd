@@ -8,16 +8,19 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-import static javafx.application.Application.launch;
 
 public class ClienteApplication extends Application{
 
     @Override
-    public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(ClienteApplication.class.getResource("cliente-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setScene(scene);
-        stage.show();
+    public void start(Stage stage){
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(ClienteApplication.class.getResource("cliente-view.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 480, 420);
+            stage.setScene(scene);
+            stage.show();
+        }catch(IOException e){
+            e.printStackTrace();
+        }
     }
 
     public static void main(String[] args) {
