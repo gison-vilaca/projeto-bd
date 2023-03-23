@@ -7,7 +7,7 @@
 É uma aplicação escrita em Java com conexão ao SQL Server para a disciplina de __Banco de Dados__ ministrada pelo Professor Dimas Cassimiro do Nascimento Filho, da  Universidade Federal do Agreste de Pernambuco(UFAPE), referente ao período de 2022.1 com intuito de avaliação para a 2ª Verificação de Aprendizagem.
 
 ## :round_pushpin: Objetivos
-.
+Aplicar o conhecimento de banco adquirido na disciplina, em um sistema.
 
 ## :hammer_and_wrench: Tecnologias Usadas
 ### [SGBD SQL Server](https://www.microsoft.com/pt-br/sql-server/sql-server-downloads)
