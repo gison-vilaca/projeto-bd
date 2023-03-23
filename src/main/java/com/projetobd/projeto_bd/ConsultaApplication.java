@@ -14,7 +14,7 @@ public class ConsultaApplication extends Application {
     public void start(Stage stage){
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(ClienteApplication.class.getResource("consulta-view.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 580, 420);
+            Scene scene = new Scene(fxmlLoader.load());
             stage.setScene(scene);
             stage.show();
         }catch(IOException e){
