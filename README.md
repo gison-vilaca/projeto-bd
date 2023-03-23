@@ -26,7 +26,7 @@ Aplicar o conhecimento de banco de dados adquirido na disciplina, em um sistema.
 
 ## :memo: Tutoriais
 ### [Autenticação no SQL Server](https://www.youtube.com/watch?v=IbArd7cn2x4&t=153s)
-### [Restaurando Backup](https://www.youtube.com/watch?v=IbArd7cn2x4&t=153s)
+### [Backup do Banco de Dados e Restauração](https://www.youtube.com/watch?v=ndkxT7aEgWM&t=1s)
 
 
 ## :construction: Status do Projeto
