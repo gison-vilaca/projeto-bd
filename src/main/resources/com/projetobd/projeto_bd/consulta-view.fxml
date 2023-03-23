@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projetobd.projeto_bd.ConsultaController">
+<?import javafx.scene.control.TextArea?>
+<AnchorPane prefHeight="721.0" prefWidth="1112.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projetobd.projeto_bd.ConsultaController">
    <children>
-      <Label layoutX="199.0" layoutY="38.0" text="CONSULTA">
+      <Label layoutX="476.0" layoutY="14.0" text="CONSULTA">
          <font>
             <Font size="38.0" />
          </font>
       </Label>
-      <TextField fx:id="txtComando" layoutX="50.0" layoutY="124.0" prefHeight="25.0" prefWidth="500.0" />
-      <Button fx:id="realizar" layoutX="476.0" layoutY="174.0" mnemonicParsing="false" onAction="#onRealizarButtonClick" prefHeight="25.0" prefWidth="73.0" text="Realizar" />
-      <Label fx:id="txtsaida" layoutX="58.0" layoutY="266.0" prefHeight="40.0" prefWidth="65.0" text="Saída:">
+      <TextArea fx:id="txtconsulta" layoutX="12.0" layoutY="89.0" prefHeight="132.0" prefWidth="1090.0" />
+      <Button fx:id="realizar" layoutX="464.0" layoutY="230.0" mnemonicParsing="false" onAction="#onRealizarButtonClick" prefHeight="63.0" prefWidth="214.0" text="Realizar" />
+      <Label fx:id="txtsaida" layoutX="11.0" layoutY="299.0" prefHeight="408.0" prefWidth="1090.0" text="Saída:">
          <font>
             <Font size="17.0" />
          </font>
