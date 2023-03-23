@@ -1,17 +1,18 @@
 package com.projetobd.projeto_bd;
 
+import Models.Consulta;
+import Models.DAO.consultaDAO;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+
+import java.util.ArrayList;
 
 public class ConsultaController {
 
     @FXML
     private Button realizar;
     @FXML
-    private TextField txtComando ;
+    private TextArea txtconsulta ;
     @FXML
     private Label txtsaida;
 
@@ -19,9 +20,26 @@ public class ConsultaController {
     @FXML
     protected void onRealizarButtonClick() {
 
-        String comando= txtComando.getText();
+        try {
+            String comando = txtconsulta.getText();
 
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Consulta realizada com sucesso!");
-        alert.show();
+            Consulta consulta = new Consulta(comando);
+
+            consultaDAO consultaDAO = new consultaDAO();
+
+            ArrayList<String> res = consultaDAO.resultado(consulta);
+
+            txtsaida.setText(formatarString(res));
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Consulta realizada com sucesso!");
+            alert.show();
+
+        }catch (Exception e){
+            Alert alert = new Alert(Alert.AlertType.ERROR, "Verifique sua consulta");
+            alert.show();
+        }
+    }
+
+    public String formatarString(ArrayList<String> res){
+        return res.toString();
     }
 }
