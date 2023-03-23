@@ -8,7 +8,7 @@
 <Pane blendMode="MULTIPLY" cache="true" cacheHint="QUALITY" focusTraversable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="246.0" prefWidth="541.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projetobd.projeto_bd.CategoriaController">
     <children>
         <Button fx:id="salvo" layoutX="414.0" layoutY="167.0" mnemonicParsing="false" onAction="#onSalvarButtonClick" prefHeight="38.0" prefWidth="65.0" text="Salvar" />
-        <Label graphicTextGap="7.0" layoutX="193.0" layoutY="14.0" prefHeight="38.0" prefWidth="189.0" text="Categoria">
+        <Label graphicTextGap="7.0" layoutX="146.0" layoutY="14.0" prefHeight="38.0" prefWidth="269.0" text="Cadastro de Categoria">
             <font>
                 <Font size="26.0" />
             </font>

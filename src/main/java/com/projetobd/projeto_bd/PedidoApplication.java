@@ -15,7 +15,7 @@ public class PedidoApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(PedidoApplication.class.getResource("pedido-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+        Scene scene = new Scene(fxmlLoader.load(), 480, 430);
         stage.setScene(scene);
         stage.show();
     }

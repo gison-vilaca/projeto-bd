@@ -6,7 +6,7 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projetobd.projeto_bd.ArmazemController">
    <children>
-      <Label layoutX="194.0" layoutY="24.0" prefHeight="70.0" prefWidth="174.0" text="Armazem ">
+      <Label layoutX="136.0" layoutY="24.0" prefHeight="70.0" prefWidth="275.0" text="Cadastro de Armazem ">
          <font>
             <Font size="25.0" />
          </font>
