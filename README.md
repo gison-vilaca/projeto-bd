@@ -35,7 +35,10 @@ Em andamento
 
 
 ## :keyboard: Acessando o sistema
-![Exemplo](https://user-images.githubusercontent.com/117764233/227300143-83aa74fa-f3cf-43db-ab19-c535a210348b.png)
+*   Escolha a opção "Autenticação do SQL Server"
+*   E preencha os campos de login e senha
+*   Exemplo:
+![Exemplo](https://user-images.githubusercontent.com/117764233/227303077-6252ff1e-1c06-4e28-9605-079ed552f174.png)
 
 
 ## :framed_picture: Imagens do Sistema
