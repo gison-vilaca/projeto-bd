@@ -8,7 +8,7 @@
 <Pane blendMode="MULTIPLY" cache="true" cacheHint="QUALITY" focusTraversable="true" prefHeight="320.0" prefWidth="499.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projetobd.projeto_bd.FornecedorController">
     <children>
         <Button fx:id="salvo" layoutX="361.0" layoutY="260.0" mnemonicParsing="false" onAction="#onSalvarButtonClick" prefHeight="32.0" prefWidth="87.0" text="Salvar" />
-        <Label graphicTextGap="7.0" layoutX="193.0" layoutY="14.0" prefHeight="38.0" prefWidth="189.0" text="Fornecedor">
+        <Label graphicTextGap="7.0" layoutX="109.0" layoutY="14.0" prefHeight="38.0" prefWidth="296.0" text="Cadastro de Fornecedor">
             <font>
                 <Font size="26.0" />
             </font>

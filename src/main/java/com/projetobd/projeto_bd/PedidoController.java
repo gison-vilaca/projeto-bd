@@ -1,11 +1,15 @@
 package com.projetobd.projeto_bd;
 
+import com.projetobd.projeto_bd.util.Constraints;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 
+import java.net.URL;
 import java.time.LocalDate;
+import java.util.ResourceBundle;
 
-public class PedidoController {
+public class PedidoController implements Initializable {
 
     @FXML
     private Button salvo;
@@ -39,6 +43,12 @@ public class PedidoController {
             Alert alert = new Alert(Alert.AlertType. ERROR, "Digite um numero valido!");
             alert.show();
         }
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        Constraints.setTextFieldInteger(txtIdCliente); //para aceitar apenas inteiros no campo de id
+
     }
 
 
