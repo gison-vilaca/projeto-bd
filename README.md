@@ -31,7 +31,7 @@ Aplicar o conhecimento de banco de dados adquirido na disciplina, em um sistema.
 
 
 ## :construction: Status do Projeto
-Em andamento
+Concluído.
 
 
 ## :keyboard: Acessando o sistema
