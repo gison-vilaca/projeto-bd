@@ -1,5 +1,7 @@
 package com.projetobd.projeto_bd;
 
+import Models.DAO.ProdutoDAO;
+import Models.Produto;
 import com.projetobd.projeto_bd.util.Constraints;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -36,6 +38,7 @@ public class ProdutoController implements Initializable {
     @FXML
     private TextField txtDescricaoProduto;
 
+    private  ProdutoDAO  produtoDAO = new ProdutoDAO();
     @FXML
     protected void onSalvarButtonClick() {
         try {
@@ -48,6 +51,25 @@ public class ProdutoController implements Initializable {
             int idCategoria = Integer.parseInt(txtIdCategoria.getText());
             String nomeProduto = txtProdutoNome.getText();
             String descricaoProduto = txtDescricaoProduto.getText();
+
+
+            Produto produto = new Produto();
+            produto.setPreco_custo(precoCusto);
+            produto.setPreco_venda_minimo(precoVendaMinima);
+            produto.setPreco_venda(precoVenda);
+            produto.setValor_status(valorStatus);
+            produto.setData_garantia(java.sql.Date.valueOf(dataGarantia));
+            produto.setId_fornecedor(idFornecedor);
+            produto.setId_categoria(idCategoria);
+            produto.setProduto_nome(nomeProduto);
+            produto.setProduto_descricao(descricaoProduto);
+
+            try {
+                produtoDAO.create(produto);
+            }catch (Exception e){
+                throw new RuntimeException(e);
+            }
+
 
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Produto cadastrado com sucesso!");
             alert.show();
