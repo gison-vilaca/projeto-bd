@@ -31,7 +31,7 @@ Aplicar o conhecimento de banco de dados adquirido na disciplina, em um sistema.
 
 
 ## :construction: Status do Projeto
-Em andamento
+Concluído.
 
 
 ## :keyboard: Acessando o sistema
@@ -41,6 +41,27 @@ Em andamento
 ![Exemplo](https://user-images.githubusercontent.com/117764233/227303077-6252ff1e-1c06-4e28-9605-079ed552f174.png)
 
 
+Após o tutorial de autenticação do SQL Server, mudar o usuário e senha no diretório:
+src/main/java/Models/DAO/DAO.java
+
+
 ## :framed_picture: Imagens do Sistema
-Ainda sem imagens
+ * Exemplo de consulta realizada com sucesso:
+ 
+![image](https://user-images.githubusercontent.com/117764233/227409287-86a6cdbb-85cb-4146-b086-4e7cfd9db9c7.png)
+![image (1)](https://user-images.githubusercontent.com/117764233/227409312-73e8cb51-6dea-4c78-a195-39c9e1433bc4.png)
+
+* Exemplo de consulta com erro:
+
+![image (2)](https://user-images.githubusercontent.com/117764233/227409334-261265f9-1a13-43fb-8895-a6b6ff9e8fc7.png)
+
+* Menu executavél da aplicação: 
+
+![image (3)](https://user-images.githubusercontent.com/117764233/227409348-4bb5f384-edd2-4224-bf34-2ae497871534.png)
+
+* Telas das classes essenciais do sistema:
+
+![image (4)](https://user-images.githubusercontent.com/117764233/227409385-314913c4-37a4-402b-8c15-288ebafd9384.png)
+![image (5)](https://user-images.githubusercontent.com/117764233/227409397-ab9db53e-7765-4129-868d-540b8e1ff5f3.png)
+
 
