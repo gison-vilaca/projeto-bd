@@ -1,5 +1,7 @@
 package com.projetobd.projeto_bd;
 
+import Models.DAO.FornecedorDAO;
+import Models.Fornecedor;
 import com.projetobd.projeto_bd.util.Constraints;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -24,14 +26,27 @@ public class FornecedorController implements Initializable {
     @FXML
     protected void onSalvarButtonClick(){
 
-        String nome = txtNome.getText();
-        String localidade = txtLocalidade.getText();
-        String tipoFornecedor = txtTipoFornecedor.getText();
-        String cpfCnpj = txtCpfCnpj.getText();
+        try {
+            String nome = txtNome.getText();
+            String localidade = txtLocalidade.getText();
+            String tipoFornecedor = txtTipoFornecedor.getText();
+            String cpfCnpj = txtCpfCnpj.getText();
 
+            FornecedorDAO fornecedorDAO = new FornecedorDAO();
+            Fornecedor fornecedor = new Fornecedor();
+            fornecedor.setNome(nome);
+            fornecedor.setLocalidade(localidade);
+            fornecedor.setTipo_fornecedor(tipoFornecedor);
+            fornecedor.setCpf_cnpj(cpfCnpj);
 
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Fornecedor salvo com sucesso!");
-        alert.show();
+            fornecedorDAO.create(fornecedor);
+
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Fornecedor salvo com sucesso!");
+            alert.show();
+
+        }catch (Exception e){
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
