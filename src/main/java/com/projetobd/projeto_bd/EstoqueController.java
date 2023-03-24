@@ -1,5 +1,7 @@
 package com.projetobd.projeto_bd;
 
+import Models.DAO.EstoqueDAO;
+import Models.Estoque;
 import com.projetobd.projeto_bd.util.Constraints;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -32,6 +34,19 @@ public class EstoqueController implements Initializable {
             int quantidade = Integer.parseInt(txtQuantidade.getText());
             int idProduto = Integer.parseInt(txtIdProduto.getText());
             int idArmazem = Integer.parseInt(txtIdArmazem.getText());
+
+            Estoque estoque = new Estoque();
+            estoque.setCod_estoque(codigo);
+            estoque.setQuantidade(quantidade);
+            estoque.setId_produto(idProduto);
+            estoque.setId_armazem(idArmazem);
+
+            try {
+                EstoqueDAO estoqueDAO = new EstoqueDAO();
+                estoqueDAO.create(estoque);
+            }catch (Exception e){
+                throw new RuntimeException(e);
+            }
 
 
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Estoque cadastrado com sucesso!");

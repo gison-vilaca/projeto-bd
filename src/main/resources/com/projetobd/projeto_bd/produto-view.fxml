@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane prefHeight="414.0" prefWidth="574.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projetobd.projeto_bd.ProdutoController">
+<Pane prefHeight="456.0" prefWidth="611.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projetobd.projeto_bd.ProdutoController">
    <children>
       <TextField fx:id="txtPrecoCusto" layoutX="138.0" layoutY="95.0" prefHeight="34.0" prefWidth="75.0" promptText="0.0" />
       <Label layoutX="150.0" layoutY="26.0" text="Cadastro de Produto">
@@ -64,6 +64,6 @@
          </font>
       </Label>
       <TextField fx:id="txtProdutoNome" layoutX="410.0" layoutY="263.0" prefHeight="34.0" prefWidth="121.0" promptText="txt" />
-      <Button fx:id="salvo" layoutX="461.0" layoutY="357.0" mnemonicParsing="false" onAction="#onSalvarButtonClick" prefHeight="34.0" prefWidth="75.0" text="Salvar" />
+      <Button fx:id="salvo" layoutX="197.0" layoutY="385.0" mnemonicParsing="false" onAction="#onSalvarButtonClick" prefHeight="45.0" prefWidth="206.0" text="Salvar" />
    </children>
 </Pane>

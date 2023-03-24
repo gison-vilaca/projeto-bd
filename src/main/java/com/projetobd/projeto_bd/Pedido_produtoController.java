@@ -1,5 +1,7 @@
 package com.projetobd.projeto_bd;
 
+import Models.DAO.Pedido_ProdutoDAO;
+import Models.Pedido_Produto;
 import com.projetobd.projeto_bd.util.Constraints;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -21,6 +23,8 @@ public class Pedido_produtoController implements Initializable {
     private TextField txtIdProduto;
     @FXML
     private TextField txtPrecoProduto;
+    @FXML
+    private TextField txtIdPedido;
 
     @FXML
     protected void onSalvarButtonClick(){
@@ -29,6 +33,20 @@ public class Pedido_produtoController implements Initializable {
             int quantidade = Integer.parseInt(txtQuantidade.getText());
             int idProduto = Integer.parseInt(txtIdProduto.getText());
             float precoProduto = Float.parseFloat(txtPrecoProduto.getText());
+            int id_pedido = Integer.parseInt(txtIdPedido.getText());
+
+            Pedido_Produto pedido_produto = new Pedido_Produto();
+            pedido_produto.setId_produto(idProduto);
+            pedido_produto.setPreco_produto(precoProduto);
+            pedido_produto.setId_pedido(id_pedido);
+            pedido_produto.setQuantidade(quantidade);
+
+            try {
+                Pedido_ProdutoDAO pedidoProdutoDAO = new Pedido_ProdutoDAO();
+                pedidoProdutoDAO.create(pedido_produto);
+            }catch (Exception e){
+                throw new RuntimeException(e);
+            }
 
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Pedido de produto salvo com sucesso!");
             alert.show();
