@@ -105,13 +105,16 @@ public class Produto {
     public void setProduto_descricao(ArrayList<String> produto_descricao) {
         this.produto_descricao = produto_descricao;
     }
+    public void setProduto_descricao(String produto_descricao) {
+        this.produto_descricao.add(produto_descricao);
+    }
 
     public ArrayList<String> getProduto_nome() {
         return produto_nome;
     }
 
-    public void setProduto_nome(ArrayList<String> produto_nome) {
-        this.produto_nome = produto_nome;
+    public void setProduto_nome(String produto_nome) {
+        this.produto_nome.add(produto_nome);
     }
 
     @Override
