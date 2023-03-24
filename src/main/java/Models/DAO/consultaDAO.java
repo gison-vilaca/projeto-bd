@@ -17,6 +17,7 @@ public class consultaDAO {
     public ArrayList<String> resultado(Consulta consulta) throws Exception {
         ResultSet rs = null;
         String col1 = "";
+        String titulo="";
         ArrayList<String> res = new ArrayList<>();
         try {
             String sql = consulta.getComando();
@@ -31,11 +32,15 @@ public class consultaDAO {
             while(rs.next()){
 
                 for(int i = 1; i <= ncol; i++){
-                    col1 += rs.getString(i)+"|";
+                    col1 += rs.getString(i)+ ";";
                 }
                 res.add(col1);
                 col1 = "";
             }
+            for(int i = 1; i <= ncol; i++){
+                titulo += rsmd.getColumnName(i)+";";
+            }
+            res.add(0,titulo);
 
             return  res;
 
@@ -44,4 +49,5 @@ public class consultaDAO {
         }
 
     }
+
 }
