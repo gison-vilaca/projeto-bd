@@ -41,6 +41,10 @@ Em andamento
 ![Exemplo](https://user-images.githubusercontent.com/117764233/227303077-6252ff1e-1c06-4e28-9605-079ed552f174.png)
 
 
+Após o tutorial de autenticação do SQL Server, mudar o direório:
+src/main/java/Models/DAO/DAO.java
+
+
 ## :framed_picture: Imagens do Sistema
  * Exemplo de consulta realizada com sucesso:
  
