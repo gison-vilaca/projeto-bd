@@ -22,6 +22,6 @@
          </font>
       </Label>
       <TextField fx:id="txtEndereco" layoutX="131.0" layoutY="171.0" prefHeight="25.0" prefWidth="360.0" promptText="endereco" />
-      <Button fx:id="salvo" layoutX="423.0" layoutY="281.0" mnemonicParsing="false" onAction="#onSalvarButtonClick" prefHeight="38.0" prefWidth="95.0" text="Salvar" />
+      <Button fx:id="salvo" layoutX="390.0" layoutY="211.0" mnemonicParsing="false" onAction="#onSalvarButtonClick" prefHeight="38.0" prefWidth="95.0" text="Salvar" />
    </children>
 </AnchorPane>

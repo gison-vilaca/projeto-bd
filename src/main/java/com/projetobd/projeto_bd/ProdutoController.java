@@ -1,5 +1,6 @@
 package com.projetobd.projeto_bd;
 
+import Models.Produto;
 import com.projetobd.projeto_bd.util.Constraints;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -48,6 +49,8 @@ public class ProdutoController implements Initializable {
             int idCategoria = Integer.parseInt(txtIdCategoria.getText());
             String nomeProduto = txtProdutoNome.getText();
             String descricaoProduto = txtDescricaoProduto.getText();
+
+
 
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Produto cadastrado com sucesso!");
             alert.show();

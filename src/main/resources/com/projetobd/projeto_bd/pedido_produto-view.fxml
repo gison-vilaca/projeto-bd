@@ -9,19 +9,21 @@
     <cursor>
         <Cursor fx:constant="DEFAULT" />
     </cursor>
-    <Button fx:id="salvo" layoutX="386.0" layoutY="220.0" mnemonicParsing="false" onAction="#onSalvarButtonClick" text="Salvar" />
+    <Button fx:id="salvo" layoutX="170.0" layoutY="216.0" mnemonicParsing="false" onAction="#onSalvarButtonClick" prefHeight="49.0" prefWidth="173.0" text="Salvar" />
     <Label graphicTextGap="7.0" layoutX="74.0" layoutY="22.0" prefHeight="38.0" prefWidth="338.0" text="Cadastro Pedido de Produto">
         <font>
             <Font size="26.0" />
         </font>
     </Label>
-    <TextField fx:id="txtQuantidade" accessibleText="quantidade" layoutX="105.0" layoutY="100.0" prefHeight="25.0" prefWidth="320.0" promptText="0" />
-    <Label layoutX="33.0" layoutY="100.0" text="quantidade: " />
+    <TextField fx:id="txtQuantidade" accessibleText="quantidade" layoutX="120.0" layoutY="100.0" prefHeight="25.0" prefWidth="305.0" promptText="0" />
+    <Label layoutX="42.0" layoutY="104.0" text="quantidade: " />
 
-    <TextField fx:id="txtIdProduto" accessibleText="id_produto" layoutX="100.0" layoutY="140.0" prefHeight="25.0" prefWidth="325.0" promptText="0" />
-    <Label layoutX="33.0" layoutY="140.0" text="id_produto: " />
+    <TextField fx:id="txtIdProduto" accessibleText="id_produto" layoutX="120.0" layoutY="140.0" prefHeight="25.0" prefWidth="305.0" promptText="0" />
+    <Label layoutX="43.0" layoutY="140.0" text="id_produto: " />
 
     <TextField fx:id="txtPrecoProduto" accessibleText="preco_produto" layoutX="120.0" layoutY="180.0" prefHeight="25.0" prefWidth="305.0" promptText="0.0" />
     <Label layoutX="33.0" layoutY="180.0" text="preco_produto: " />
+   <TextField fx:id="txtQuantidade1" accessibleText="quantidade" layoutX="120.0" layoutY="67.0" prefHeight="25.0" prefWidth="305.0" promptText="0" />
+   <Label layoutX="48.0" layoutY="71.0" text="id_pedido" />
 
 </Pane>

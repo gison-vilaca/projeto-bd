@@ -1,5 +1,7 @@
 package com.projetobd.projeto_bd;
 
+import Models.DAO.PedidoDAO;
+import Models.Pedido;
 import com.projetobd.projeto_bd.util.Constraints;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -7,6 +9,7 @@ import javafx.scene.control.*;
 
 import java.net.URL;
 import java.time.LocalDate;
+import java.util.Date;
 import java.util.ResourceBundle;
 
 public class PedidoController implements Initializable {
@@ -35,6 +38,21 @@ public class PedidoController implements Initializable {
             String statusPedido= txtStatusPedido.getText();
             LocalDate dataEntrega = datePickerdataEntegra.getValue();
             int idCliente = Integer.parseInt(txtIdCliente.getText());
+
+            Pedido pedido = new Pedido();
+            pedido.setData_pedido(java.sql.Date.valueOf(dataPedido));
+            pedido.setModo_encomenda(modoEncomenda);
+            pedido.setCliente_pedido(clientePedido);
+            pedido.setStatus_pedido(statusPedido);
+            pedido.setData_entrega(java.sql.Date.valueOf(dataEntrega));
+            pedido.setId_cliente(idCliente);
+
+            try {
+                PedidoDAO pedidoDAO = new PedidoDAO();
+                pedidoDAO.create(pedido);
+            }catch (Exception e){
+                throw new RuntimeException(e);
+            }
 
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Pedido cadastrado com sucesso!");
             alert.show();
