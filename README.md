@@ -6,11 +6,29 @@
 
 
 ## :page_with_curl: Sobre o Projeto
-É uma aplicação escrita em Java com conexão ao SQL Server para a disciplina de __Banco de Dados__ ministrada pelo Professor Dimas Cassimiro do Nascimento Filho, da  Universidade Federal do Agreste de Pernambuco(UFAPE), referente ao período de 2022.1 com intuito de avaliação para a 2ª Verificação de Aprendizagem.
+<p align="justify"> É uma aplicação escrita em Java com conexão ao SQL Server para a disciplina de __Banco de Dados__ ministrada pelo Professor Dimas Cassimiro do Nascimento Filho, da  Universidade Federal do Agreste de Pernambuco(UFAPE), referente ao período de 2022.1 com intuito de avaliação para a 2ª Verificação de Aprendizagem. O projeto foi desenvolvido através de um banco de dados que  deve armazenar informações de produtos, pedidos, clientes, estoques e outras informações relacionadas. Um produto 
+deve ser identificado por um identificador (ID), o qual deve ser único e sequencial para cada produto. Todo produto tem um nome, descrição,data de garantia, valor (numérico) de status, preço de custo, preço de venda e preço de venda mínimo. Um produto pode ter diversos nomes e descrições em idiomas diferentes. Os
+produtos são classificados em diferentes categorias, sendo que cada categoria possui um ID próprio, um nome e uma descrição. Além disso, deve ser possível identificar o fornecedor de
+um produto, tal que cada fornecedor tem um nome, localidade, tipo de fornecedor (pessoa
+física ou jurídica) e número do CNPJ ou do CPF. O estoque deve ser identificado unicamente
+por um ID (único e sequencial), além de possuir um código. Um estoque sempre está
+relacionado a um único produto, identificando a quantidade existente de um determinado
+produto. Por sua vez, um armazém é composto por um ou mais estoques. Além disso, cada
+armazém possui um ID único e sequencial, além de nome e endereço do armazém. Um pedido
+realizado por um cliente pode conter diversos produtos diferentes, sendo que os diferentes
+produtos de uma compra podem ser encomendados em quantidades diferentes. Por sua vez, o
+preço do produto em um pedido pode ser diferente do preço de venda padrão associado ao
+produto, mas não pode ser inferior ao preço mínimo de venda do produto. Um pedido deve
+ser identificado unicamente e sequencialmente por um ID, além de constar informações sobre
+data do pedido, modo de encomenda (presencial ou online), o cliente que realizou o pedido, o
+status do pedido e a data de prazo de entrega do pedido. Finalmente, cada cliente deve ser
+identificado unicamente e sequencialmente por um ID, além de constar dados sobre o nome,
+os telefone(s), o país, estado, cidade, e-mail(s), limite de crédito ($) e data de cadastro do
+cliente.</p>
 
 
 ## :round_pushpin: Objetivos
-Aplicar o conhecimento de banco de dados adquirido na disciplina, em um sistema.
+Aplicar o conhecimento de banco de dados adquirido na disciplina, em um sistema e realizar a conexão de um BD em uma aplicação usual.
 
 
 ## :hammer_and_wrench: Tecnologias Usadas
@@ -24,14 +42,13 @@ Aplicar o conhecimento de banco de dados adquirido na disciplina, em um sistema.
 *   Versão 19
 
 
-## :memo: Tutoriais
+## :memo: Tutoriais de referência para conexão com o Banco
 ### [Autenticação no SQL Server](https://www.youtube.com/watch?v=IbArd7cn2x4&t=153s)
 ### [Backup do Banco de Dados e Restauração](https://www.youtube.com/watch?v=ndkxT7aEgWM&t=1s)
 ### [Gerando Instalador - Aplicação Java](https://www.youtube.com/watch?v=uZnseHc2PBA&t=136s)
 
-
-## :construction: Status do Projeto
-Concluído.
+## :video_camera: Demonstração de funcionamento da aplicação em video 
+### [Funcionamento do sistema](https://drive.google.com/drive/folders/1S3Y55c8U0MF2e68fTnloz2iaYNqvY4bb?usp=sharing)
 
 
 ## :keyboard: Acessando o sistema
@@ -65,3 +82,5 @@ src/main/java/Models/DAO/DAO.java
 ![image (5)](https://user-images.githubusercontent.com/117764233/227409397-ab9db53e-7765-4129-868d-540b8e1ff5f3.png)
 
 
+## :construction: Status do Projeto
+Concluído.
